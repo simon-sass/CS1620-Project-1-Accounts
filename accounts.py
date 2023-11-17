@@ -9,57 +9,6 @@ class Account:
     :type name: str
     :param balance: The initial balance of the account (default is 0).
     :type balance: float
-
-    :Methods:
-    
-    .. method:: deposit(amount)
-    
-        Deposits a specified amount into the account.
-
-        :param float amount: The amount to deposit.
-        :return: True if the deposit is successful, False otherwise.
-        :rtype: bool
-
-    .. method:: withdraw(amount)
-    
-        Withdraws a specified amount from the account.
-
-        :param float amount: The amount to withdraw.
-        :return: True if the withdrawal is successful, False otherwise.
-        :rtype: bool
-
-    .. method:: get_balance()
-    
-        Returns the current balance of the account.
-
-        :return: The current balance of the account.
-        :rtype: float
-
-    .. method:: get_name()
-    
-        Returns the name associated with the account.
-
-        :return: The name associated with the account.
-        :rtype: str
-
-    .. method:: set_balance(value)
-    
-        Sets the balance of the account to the specified value.
-
-        :param float value: The value to set the balance to.
-
-    .. method:: set_name(value)
-    
-        Sets the name associated with the account to the specified value.
-
-        :param str value: The value to set the name to.
-
-    .. method:: __str__()
-    
-        Returns a string representation of the account.
-
-        :return: A string representation of the account.
-        :rtype: str
     """
 
     def __init__(self, name: str, balance: float = 0):
@@ -146,48 +95,6 @@ class SavingAccount(Account):
 
     :param name: The name associated with the savings account.
     :type name: str
-
-    :Methods:
-
-    .. method:: __init__(name)
-    
-        Initializes a savings account with a given name.
-
-        :param name: The name associated with the savings account.
-        :type name: str
-
-    .. method:: apply_interest()
-    
-        Applies interest to the savings account balance based on the defined interest rate.
-
-    .. method:: deposit(amount)
-    
-        Deposits a specified amount into the savings account, applying interest if eligible.
-
-        :param float amount: The amount to deposit.
-        :return: True if the deposit is successful, False otherwise.
-        :rtype: bool
-
-    .. method:: withdraw(amount)
-    
-        Withdraws a specified amount from the savings account, considering the minimum balance.
-
-        :param float amount: The amount to withdraw.
-        :return: True if the withdrawal is successful, False otherwise.
-        :rtype: bool
-
-    .. method:: set_balance(value)
-    
-        Sets the balance of the savings account to the specified value, ensuring it meets the minimum requirement.
-
-        :param float value: The value to set the balance to.
-
-    .. method:: __str__()
-    
-        Returns a string representation of the savings account.
-
-        :return: A string representation of the savings account.
-        :rtype: str
     """
 
     MINIMUM: float = 100

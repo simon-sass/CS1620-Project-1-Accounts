@@ -1,6 +1,5 @@
 from accounts import *
 
-
 def main():
     pass
 
