@@ -1,8 +1,12 @@
-from accounts import *
+from logic import *
+import sys
 
 def main():
-    pass
+    app = QApplication([])
+    ui = Logic()
+    ui.show()
+    sys.exit(app.exec())
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
     
