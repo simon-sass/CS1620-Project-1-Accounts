@@ -1,11 +1,11 @@
 class Account:
     """
-    A class representing a basic bank account.
+    A class representing a bank account.
 
-    :ivar str name: The name associated with the account.
+    :ivar str name: The name of with the account.
     :ivar float balance: The balance of the account.
 
-    :param name: The name associated with the account.
+    :param name: The name of with the account.
     :type name: str
     :param balance: The initial balance of the account (default is 0).
     :type balance: float
@@ -100,8 +100,8 @@ class SavingAccount(Account):
     MINIMUM: float = 100
     RATE: float = 0.02
 
-    def __init__(self, name: str):
-        super().__init__(name, SavingAccount.MINIMUM)
+    def __init__(self, name: str, balance: float = MINIMUM):
+        super().__init__(name, balance)
         self.__deposit_count: int = 0
     
     def apply_interest(self):
@@ -112,7 +112,7 @@ class SavingAccount(Account):
 
     def deposit(self, amount: float) -> bool:
         """
-        Deposits a specified amount into the savings account, applying interest if eligible.
+        Deposits a specified amount into the savings account, I removed the interest property present in the lab for the purpose of this project.
 
         :param float amount: The amount to deposit.
         :return: True if the deposit is successful, False otherwise.
@@ -120,8 +120,6 @@ class SavingAccount(Account):
         """
         if super().deposit(amount):
             self.__deposit_count += 1
-            if self.__deposit_count % 5 == 0:
-                self.apply_interest()
             return True
         return False
 
